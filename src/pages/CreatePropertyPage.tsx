@@ -9,8 +9,8 @@ export const CreatePropertyPage = () => {
 
   return (
     <AdminLayout 
-      title="Gestión de Propiedades" 
-      subtitle="Administra y visualiza todas las propiedades del sistema"
+      title="Crear Propiedad" 
+      subtitle="Crea una nueva propiedad"
     >  
         <PropertyForm />
     </AdminLayout>
