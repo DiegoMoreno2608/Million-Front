@@ -3,6 +3,7 @@ import { PropertyList } from "../components/PropertyList";
 import { PropertyForm } from "../components/PropertyForm";
 import { useNavigate } from 'react-router-dom';
 import { getPropertyNames } from "../services/propertyService";
+import AdminLayout from "../layouts/AdminLayout";
 
 export const PropertiesPage = () => {
     const navigate = useNavigate();
@@ -32,6 +33,10 @@ export const PropertiesPage = () => {
     };
 
     return (
+        <AdminLayout 
+      title="Gestión de Propiedades" 
+      subtitle="Administra y visualiza todas las propiedades del sistema"
+    >
         <div className="p-6">
             <div>     <button
                 className="bg-[#5d3a00] hover:bg-[#7b4c00] text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300"
@@ -71,5 +76,6 @@ export const PropertiesPage = () => {
 
             <hr className="my-6" />
         </div>
+    </AdminLayout>
     );
 };

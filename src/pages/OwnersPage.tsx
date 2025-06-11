@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { createOwner, getOwners } from '../services/ownerService';
 import Toast from '../components/Toast';
+import AdminLayout from '../layouts/AdminLayout';
 
 /**
  * Interfaz que representa un propietario.
@@ -112,6 +113,10 @@ export default function OwnersPage() {
   };
 
   return (
+    <AdminLayout 
+      title="Gestión de Propiedades" 
+      subtitle="Administra y visualiza todas las propiedades del sistema"
+    >  
     <div className="min-h-screen bg-[#f9f6f0] p-6">
       {showToast && (
         <Toast message="Propietario creado exitosamente" onClose={() => setShowToast(false)} />
@@ -208,5 +213,6 @@ export default function OwnersPage() {
         </table>
       </div>
     </div>
+    </AdminLayout>
   );
 }

@@ -2,11 +2,16 @@
 
 import { useNavigate } from 'react-router-dom';
 import { PropertyForm } from '../components/PropertyForm';
+import AdminLayout from '../layouts/AdminLayout';
 
 export const CreatePropertyPage = () => {
   const navigate = useNavigate();
 
   return (
+    <AdminLayout 
+      title="Gestión de Propiedades" 
+      subtitle="Administra y visualiza todas las propiedades del sistema"
+    >  
     <div className="min-h-screen bg-[#f9f6f0] p-6">
       <button
         className="bg-[#5d3a00] hover:bg-[#7b4c00] text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300 mb-6"
@@ -21,5 +26,6 @@ export const CreatePropertyPage = () => {
         <PropertyForm />
       </div>
     </div>
+    </AdminLayout>
   );
 };
