@@ -1,6 +1,27 @@
+/**
+ * @fileoverview Componente de footer para el panel de administración
+ * Proporciona información institucional, enlaces y datos de contacto
+ * @author Sistema Inmobiliario
+ * @version 1.0.0
+ */
+
 import React from 'react';
 
+/**
+ * Componente de footer para el panel de administración
+ * 
+ * Incluye las siguientes secciones:
+ * - Información de la empresa con logo y descripción
+ * - Enlaces rápidos a páginas principales
+ * - Sección de soporte con recursos de ayuda
+ * - Redes sociales con iconos SVG
+ * - Copyright y información legal
+ * - Versión del sistema y fecha de actualización
+ * 
+ * @returns {JSX.Element} Footer completo del panel de administración
+ */
 const FooterAdmin: React.FC = () => {
+  /** Año actual para el copyright */
   const currentYear = new Date().getFullYear();
 
   return (
