@@ -1,5 +1,29 @@
+/**
+ * @fileoverview Página principal del panel de administración
+ * Dashboard que muestra la información general del sistema
+ * @author Sistema Inmobiliario
+ * @version 1.0.0
+ */
+
 import AdminLayout from '../layouts/AdminLayout';
 
+/**
+ * Componente de la página principal (Dashboard)
+ * 
+ * Características:
+ * - Utiliza el layout administrativo con header y footer
+ * - Muestra el título y subtítulo del sistema
+ * - Diseño responsive con gradiente de fondo
+ * - Centrado vertical y horizontal del contenido
+ * 
+ * @returns {JSX.Element} Página principal del dashboard
+ * 
+ * @example
+ * ```tsx
+ * // Uso en el router
+ * <Route path="/" element={<HomePage />} />
+ * ```
+ */
 export default function HomePage() {
 
   return (

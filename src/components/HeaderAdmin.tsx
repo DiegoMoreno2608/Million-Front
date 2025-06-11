@@ -1,9 +1,33 @@
+/**
+ * @fileoverview Componente de header para el panel de administración
+ * Proporciona navegación principal, branding y perfil de usuario
+ * @author Sistema Inmobiliario
+ * @version 1.0.0
+ */
+
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+/**
+ * Componente de header para el panel de administración
+ * 
+ * Características principales:
+ * - Navegación responsive con menú móvil
+ * - Logo y branding de la aplicación
+ * - Enlaces de navegación con estado activo
+ * - Perfil de usuario con avatar e información
+ * - Completamente responsive para móviles y desktop
+ * 
+ * @returns {JSX.Element} Header del panel de administración
+ */
 const HeaderAdmin: React.FC = () => {
   const location = useLocation();
 
+  /**
+   * Determina si una ruta está activa comparándola con la ubicación actual
+   * @param {string} path - Ruta a verificar
+   * @returns {boolean} True si la ruta está activa
+   */
   const isActiveRoute = (path: string) => {
     return location.pathname === path;
   };
@@ -110,26 +134,6 @@ const HeaderAdmin: React.FC = () => {
             }`}
           >
             Propiedades
-          </Link>
-          <Link
-            to="/createProperty"
-            className={`block px-3 py-2 text-base font-medium rounded-md ${
-              isActiveRoute('/createProperty') 
-                ? 'text-blue-600 bg-blue-50' 
-                : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
-            }`}
-          >
-            Crear Propiedad
-          </Link>
-          <Link
-            to="/propertyTrace"
-            className={`block px-3 py-2 text-base font-medium rounded-md ${
-              isActiveRoute('/propertyTrace') 
-                ? 'text-blue-600 bg-blue-50' 
-                : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
-            }`}
-          >
-            Trazabilidad
           </Link>
         </div>
       </div>

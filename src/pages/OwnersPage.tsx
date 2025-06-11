@@ -7,10 +7,9 @@
  */
 
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router';
-import { createOwner, getOwners } from '../services/ownerService';
 import Toast from '../components/Toast';
 import AdminLayout from '../layouts/AdminLayout';
+import { createOwner, getOwners } from '../services/ownerService';
 
 /**
  * Interfaz que representa un propietario.
@@ -37,7 +36,6 @@ interface Owner {
  * @returns {JSX.Element}
  */
 export default function OwnersPage() {
-  const navigate = useNavigate();
   const [showToast, setShowToast] = useState(false);
   const [owners, setOwners] = useState<Owner[]>([]);
   const [form, setForm] = useState<{

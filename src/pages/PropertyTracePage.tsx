@@ -1,10 +1,8 @@
-import { useNavigate } from 'react-router-dom';
-import { PropertyTraceTable } from "../components/PropertyTraceTable";
 import { useLocation } from "react-router-dom";
+import { PropertyTraceTable } from "../components/PropertyTraceTable";
 import AdminLayout from '../layouts/AdminLayout';
 
 export const PropertyTracePage = () => {
-    const navigate = useNavigate();
     const location = useLocation();
     const fileUrl = location.state?.fileUrl;
 

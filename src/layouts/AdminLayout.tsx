@@ -1,13 +1,50 @@
+/**
+ * @fileoverview Layout principal del panel de administración
+ * Proporciona una estructura consistente con header, footer y área de contenido
+ * @author Sistema Inmobiliario
+ * @version 1.0.0
+ */
+
 import React from 'react';
 import HeaderAdmin from '../components/headerAdmin';
 import FooterAdmin from '../components/FooterAdmin';
 
+/**
+ * Props para el componente AdminLayout
+ * @interface AdminLayoutProps
+ */
 interface AdminLayoutProps {
+  /** Contenido principal que se renderizará en el layout */
   children: React.ReactNode;
+  
+  /** Título opcional de la página que se muestra en el header */
   title?: string;
+  
+  /** Subtítulo opcional que complementa el título */
   subtitle?: string;
 }
 
+/**
+ * Componente de layout principal para el panel de administración
+ * 
+ * Proporciona una estructura consistente que incluye:
+ * - Header de navegación con menú principal
+ * - Área de contenido principal responsive
+ * - Footer con información institucional
+ * 
+ * @param {AdminLayoutProps} props - Props del componente
+ * @returns {JSX.Element} Layout completo del panel de administración
+ * 
+ * @example
+ * ```tsx
+ * <AdminLayout 
+ *   title="Gestión de Propiedades" 
+ *   subtitle="Administra y visualiza todas las propiedades"
+ * >
+ *   <div>Contenido de la página aquí</div>
+ * </AdminLayout>
+ * ```
+ */
 const AdminLayout: React.FC<AdminLayoutProps> = ({ 
   children, 
   title = "Panel de Administración",
