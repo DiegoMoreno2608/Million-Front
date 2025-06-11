@@ -70,7 +70,7 @@ const HeaderAdmin: React.FC = () => {
                 <span className="text-sm font-medium text-gray-700">JD</span>
               </div>
               <div className="hidden md:block">
-                <p className="text-sm font-medium text-gray-900">Juan Admin</p>
+                <p className="text-sm font-medium text-gray-900">Admin</p>
                 <p className="text-xs text-gray-500">Administrador</p>
               </div>
             </div>
