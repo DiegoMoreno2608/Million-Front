@@ -4,7 +4,7 @@ export default function HomePage() {
 
   return (
     <AdminLayout 
-      title="Gestión de Propiedades" 
+      title="Dashboard" 
       subtitle="Administra y visualiza todas las propiedades del sistema"
     >
     <div className="min-h-screen bg-gradient-to-br flex flex-col items-center justify-center p-4">
