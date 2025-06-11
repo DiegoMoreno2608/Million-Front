@@ -9,7 +9,7 @@ export default function HomePage() {
       title="Gestión de Propiedades" 
       subtitle="Administra y visualiza todas las propiedades del sistema"
     >
-    <div className="min-h-screen bg-gradient-to-br from-[#c2b280] to-[#8b5e3c] flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br flex items-center justify-center p-4">
       <div className="bg-white shadow-2xl rounded-2xl p-10 w-full max-w-3xl">
         <h1 className="text-4xl font-bold mb-6 text-center text-[#5d3a00]">Million Luxury Properties</h1>
         <p className="text-lg text-center text-[#5d3a00] mb-8">Sistema de gestión inmobiliaria</p>

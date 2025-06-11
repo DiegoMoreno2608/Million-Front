@@ -114,26 +114,13 @@ export default function OwnersPage() {
 
   return (
     <AdminLayout 
-      title="Gestión de Propiedades" 
-      subtitle="Administra y visualiza todas las propiedades del sistema"
+      title="Gestión de Propietarios" 
+      subtitle="Administra y visualiza todos los propietarios del sistema"
     >  
-    <div className="min-h-screen bg-[#f9f6f0] p-6">
+    <div className="min-h-screen p-6">
       {showToast && (
         <Toast message="Propietario creado exitosamente" onClose={() => setShowToast(false)} />
       )}
-      <div>
-        <button
-          className="bg-[#5d3a00] hover:bg-[#7b4c00] text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300"
-          onClick={() => navigate('/')}
-        >
-          Volver
-        </button>
-      </div>
-
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-3xl font-bold text-[#5d3a00] mb-6">Propietarios</h2>
-      </div>
-
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-md mb-10">
         <h3 className="text-xl font-semibold mb-4">Crear Propietario</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

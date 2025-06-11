@@ -38,12 +38,7 @@ export const PropertiesPage = () => {
       subtitle="Administra y visualiza todas las propiedades del sistema"
     >
         <div className="p-6">
-            <div>     <button
-                className="bg-[#5d3a00] hover:bg-[#7b4c00] text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300"
-                onClick={() => navigate('/')}
-            >
-                Volver
-            </button></div>
+
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-bold">Propiedades</h2>
                 <button
