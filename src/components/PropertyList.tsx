@@ -46,12 +46,12 @@ export const PropertyList = ({ filters }: Props) => {
             className="w-full h-48 object-cover rounded-t-lg"
           />
           <div className="p-4">
-            <h3 className="text-xl font-semibold text-amber-700">{p.name}</h3>
+            <h3 className="text-xl font-semibold text-blue-600">{p.name}</h3>
             <p className="text-gray-600">{p.address}</p>
             <p className="text-lg text-gray-800 font-bold mt-2">${p.price.toLocaleString()}</p>
             <p className="text-sm text-gray-500">Año: {p.year}</p>
             <div> <button
-              className="bg-[#ce9232] hover:bg-[#7b4c00] text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300"
               onClick={() => navigate('/propertyTrace', { state: { fileUrl: p.fileUrl } })}>
               Ver Detalles
             </button></div>
