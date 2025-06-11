@@ -122,7 +122,15 @@ export default function OwnersPage() {
         <Toast message="Propietario creado exitosamente" onClose={() => setShowToast(false)} />
       )}
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-md mb-10">
+        <div className="flex justify-between items-center mb-4">
         <h3 className="text-xl font-semibold mb-4">Crear Propietario</h3>
+        <button
+          type="submit"
+           className="bg-blue-600 hover:bg-blue-700 text-white font-semibold p-2 px-4 rounded-full shadow-md transition duration-300"
+        >
+          Crear
+        </button>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Campos del formulario */}
           <input
@@ -163,18 +171,13 @@ export default function OwnersPage() {
             </div>
           )}
         </div>
-        <button
-          type="submit"
-          className="mt-4 bg-[#5d3a00] text-white py-2 px-4 rounded hover:bg-[#7b4c00]"
-        >
-          Crear
-        </button>
+
       </form>
 
       <div className="overflow-x-auto">
         <table className="w-full bg-white rounded-xl shadow-md">
           <thead>
-            <tr className="bg-[#e8dac4] text-left">
+            <tr className="bg-gray-100 text-left">
               <th className="p-3">Nombre</th>
               <th className="p-3">Dirección</th>
               <th className="p-3">Foto</th>

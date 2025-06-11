@@ -42,10 +42,10 @@ export const PropertiesPage = () => {
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-bold">Propiedades</h2>
                 <button
-                    className="bg-[#5d3a00] hover:bg-[#7b4c00] text-white font-semibold py-4 px-6 rounded-xl shadow-md transition duration-300"
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold p-2 px-4 rounded-full shadow-md transition duration-300"
                     onClick={() => navigate('/createProperty')}
                 >
-                    Crear Propiedad
+                    Crear
                 </button>
             </div>
             <div className="grid grid-cols-2 gap-4 mb-6">

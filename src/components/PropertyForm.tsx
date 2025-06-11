@@ -86,8 +86,16 @@ export const PropertyForm = () => {
         <Toast message="Propiedad creada exitosamente" onClose={() => setShowToast(false)} />
 
       )}
-      <h3 className="text-xl font-semibold mb-4">Crear Propiedad</h3>
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="flex justify-between items-center mb-4 col-span-2">
+      <h3 className="text-xl font-semibold mb-4">Crear Propiedad</h3>
+      <button
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold p-2 px-4 rounded-full shadow-md transition duration-300"
+                    type="submit"
+                >
+                    Crear
+                </button>
+        </div>
         <input name="name" value={form.name} onChange={handleChange} placeholder="Nombre" className="border p-2 rounded" required />
         <input name="address" value={form.address} onChange={handleChange} placeholder="Dirección" className="border p-2 rounded" required />
         <input name="price" type="number" value={form.price} onChange={handleChange} placeholder="Precio" className="border p-2 rounded" required />
@@ -109,13 +117,6 @@ export const PropertyForm = () => {
             <img src={previewUrl} alt="Preview" className="w-32 h-32 object-cover rounded-md mt-2" />
           </div>
         )}
-
-        <button
-          type="submit"
-          className="mt-4 bg-[#5d3a00] text-white py-2 px-4 rounded hover:bg-[#7b4c00] col-span-1 md:col-span-2"
-        >
-          Crear
-        </button>
       </form>
     </div>
   );

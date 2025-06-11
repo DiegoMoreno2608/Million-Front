@@ -10,18 +10,11 @@ export const PropertyTracePage = () => {
 
     return (
         <AdminLayout 
-      title="Gestión de Propiedades" 
-      subtitle="Administra y visualiza todas las propiedades del sistema"
+      title="Gestión de trazabilidad de la propiedad" 
+      subtitle="Administra y visualiza la trazabilidad de la propiedad"
     >
         <div className="p-6">
-            <button
-                className="bg-[#5d3a00] hover:bg-[#7b4c00] text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300"
-                onClick={() => navigate('/properties')}
-            >
-                Volver
-            </button>
             <div className="mb-8">
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">Trazabilidad de la propiedad</h2>
 
                 {fileUrl && (
                     <div className="flex flex-col items-center gap-2">

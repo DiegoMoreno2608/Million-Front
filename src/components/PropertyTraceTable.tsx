@@ -17,7 +17,7 @@ export const PropertyTraceTable = () => {
   return (
     <div className="overflow-x-auto mt-6">
       <table className="min-w-full bg-white border border-gray-200 rounded shadow">
-        <thead className="bg-amber-700 text-white">
+        <thead className="bg-gray-100 ">
           <tr>
             <th className="py-2 px-4 text-left">Propiedad</th>
             <th className="py-2 px-4 text-left">Nombre</th>
