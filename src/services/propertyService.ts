@@ -6,6 +6,7 @@
  */
 
 import axios from 'axios';
+import { PropertyTrace } from '../types/PropertyTrace';
 
 /** URL base de la API de propiedades */
 const API_URL = 'https://localhost:44357/api/Properties';
@@ -49,5 +50,21 @@ export const createProperty = async (property: any) => {
  */
 export const getPropertyNames = async (): Promise<string[]> => {
   const response = await axios.get(`${API_URL}/names`);
+  return response.data;
+};
+
+export const createPropertyTrace = async (trace: PropertyTrace) => {
+  const payload = {
+    ...trace,
+  };
+
+  const response = await axios.post(`${API_URL}/createTrace`, payload);
+  return response.data;
+};
+
+export const getAllTraces = async (idProperty?: string): Promise<PropertyTrace[]> => {
+  const response = await axios.get(`${API_URL}/getAll`, {
+    params: idProperty ? { idProperty } : {}
+  });
   return response.data;
 };

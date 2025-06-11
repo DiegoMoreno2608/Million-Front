@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import HeaderAdmin from '../components/headerAdmin';
+import HeaderAdmin from '../components/HeaderAdmin';
 import FooterAdmin from '../components/FooterAdmin';
 
 /**

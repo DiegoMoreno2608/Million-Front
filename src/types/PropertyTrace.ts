@@ -10,21 +10,10 @@
  * @interface PropertyTrace
  */
 export interface PropertyTrace {
-  /** Identificador único del registro de trazabilidad */
-  idPropertyTrace: string;
-  
-  /** Identificador de la propiedad asociada */
   idProperty: string;
-  
-  /** Fecha de la transacción en formato ISO string */
-  dateSale: string;
-  
-  /** Nombre del comprador o nuevo propietario */
+  idPropertyTrace: string;
   name: string;
-  
-  /** Valor de la transacción */
   value: number;
-  
-  /** Impuestos aplicados a la transacción */
   tax: number;
+  dateSale: string;
 }

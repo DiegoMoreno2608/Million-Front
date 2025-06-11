@@ -1,23 +1,28 @@
 // src/components/PropertyTraceTable.tsx
 import { useEffect, useState } from "react";
-import { getAllTraces } from "../services/propertyTraceService";
+import { getAllTraces } from "../services/propertyService";
 import { PropertyTrace } from "../types/PropertyTrace";
 
-export const PropertyTraceTable = () => {
+interface Props {
+  idProperty?: string;
+}
+
+export const PropertyTraceTable = ({ idProperty }: Props) => {
   const [traces, setTraces] = useState<PropertyTrace[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getAllTraces();
+      const data = await getAllTraces(idProperty); // ⬅️ Filtra por id
       setTraces(data);
+      console.log("Datos de trazas obtenidos:", data);
     };
     fetchData();
-  }, []);
+  }, [idProperty]); // ⬅️ Se ejecuta si cambia
 
   return (
     <div className="overflow-x-auto mt-6">
       <table className="min-w-full bg-white border border-gray-200 rounded shadow">
-        <thead className="bg-gray-100 ">
+        <thead className="bg-gray-100">
           <tr>
             <th className="py-2 px-4 text-left">Propiedad</th>
             <th className="py-2 px-4 text-left">Nombre</th>
@@ -32,8 +37,8 @@ export const PropertyTraceTable = () => {
               <td className="py-2 px-4">{t.idProperty}</td>
               <td className="py-2 px-4">{t.name}</td>
               <td className="py-2 px-4">{new Date(t.dateSale).toLocaleDateString()}</td>
-              <td className="py-2 px-4">${t.value.toLocaleString()}</td>
-              <td className="py-2 px-4">${t.tax.toLocaleString()}</td>
+              <td className="py-2 px-4">${t.value}</td>
+              <td className="py-2 px-4">${t.tax}</td>
             </tr>
           ))}
         </tbody>

@@ -6,6 +6,7 @@ import Toast from "./Toast";
 
 export const PropertyForm = () => {
   const [form, setForm] = useState<{
+    idProperty?: string;
     name: string;
     address: string;
     price: string;
@@ -14,6 +15,7 @@ export const PropertyForm = () => {
     idOwner: string;
     photo: File | null;
   }>({
+    idProperty: "",
     name: "",
     address: "",
     price: "",
@@ -64,6 +66,7 @@ export const PropertyForm = () => {
 
       await createProperty(formData);
       setForm({
+        idProperty: "",
         name: "",
         address: "",
         price: "",
@@ -74,6 +77,7 @@ export const PropertyForm = () => {
       });
       setPreviewUrl(null);
       setShowToast(true);
+      navigate("/properties"); 
     } catch (err) {
       console.error("Error al crear propiedad", err);
       alert("Error al crear propiedad");

@@ -12,6 +12,7 @@ import OwnersPage from './pages/OwnersPage';
 import { PropertiesPage } from './pages/PropertiesPage';
 import { CreatePropertyPage } from './pages/CreatePropertyPage';
 import { PropertyTracePage } from './pages/PropertyTracePage';
+import { CreatePropertyTraceForm } from './components/CreatePropertyTraceForm';
 
 /**
  * Componente principal de la aplicación
@@ -33,6 +34,7 @@ const App: React.FC = () => {
       <Route path="/properties" element={<PropertiesPage />} />
       <Route path="/createProperty" element={<CreatePropertyPage />} />
       <Route path="/propertyTrace" element={<PropertyTracePage />} />
+      <Route path="/createPropertyTrace" element={<CreatePropertyTraceForm />} />
     </Routes>
   );
 };

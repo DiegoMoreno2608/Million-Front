@@ -37,7 +37,7 @@ export const PropertyList = ({ filters }: Props) => {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
       {properties.map((p) => (
         <div
-          key={p.idProperty}
+        key={p.idProperty || crypto.randomUUID()}
           className="bg-white border rounded-lg shadow hover:shadow-lg transition duration-300"
         >
           <img
@@ -46,13 +46,13 @@ export const PropertyList = ({ filters }: Props) => {
             className="w-full h-48 object-cover rounded-t-lg"
           />
           <div className="p-4">
-            <h3 className="text-xl font-semibold text-blue-600">{p.name}</h3>
+            <h3 className="text-xl font-semibold text-amber-700">{p.name}</h3>
             <p className="text-gray-600">{p.address}</p>
             <p className="text-lg text-gray-800 font-bold mt-2">${p.price.toLocaleString()}</p>
             <p className="text-sm text-gray-500">Año: {p.year}</p>
             <div> <button
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300"
-              onClick={() => navigate('/propertyTrace', { state: { fileUrl: p.fileUrl } })}>
+              onClick={() => navigate('/propertyTrace', { state: { fileUrl: p.fileUrl, idProperty: p.idProperty } })}>
               Ver Detalles
             </button></div>
           </div>
