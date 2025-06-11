@@ -131,3 +131,4 @@ El frontend se conecta a una API REST en `https://localhost:44357/api/` con los 
 **Versión:** 1.0.0  
 **Última actualización:** ${new Date().toLocaleDateString()}  
 **Desarrollado por:** Sistema Inmobiliario
+# Million-Front
